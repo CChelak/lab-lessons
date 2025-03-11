@@ -32,6 +32,14 @@ def gen_random_data_frame(n_row):
     return df
 
 def plot_multiple_regressions(frame, formula: str):
+    """Plot multiple regressions from the formula given
+
+    TODO: Use the underlying parser that statsmodels uses to parse the formula
+
+    Args:
+        frame (pandas.DataFrame): a DataFrame that corresponds to the formula
+        formula (str): a formula with dependent and independent variables
+    """
     form_split_list = formula.split('~')
     dep_var = form_split_list[0].strip()
 
